@@ -25,7 +25,7 @@ it's absolute location when you want to execute it.
 
 ```
 $ spc test-project
-``'
+```
 
 This will create a project in the current directory.
 
