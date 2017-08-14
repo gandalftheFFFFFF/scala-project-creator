@@ -46,17 +46,17 @@ cat > $PROJECT_ROOT/build.sbt <<- EOM
 scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
-  //"com.typesafe.akka" %% "akka-actor" % $AKKA_VERSION,
-  //"com.typesafe.akka" %% "akka-camel" % $AKKA_VERSION,
-  //"com.typesafe.akka" %% "akka-slf4j" % $AKKA_VERSION,
-  //"com.typesafe.akka" %% "akka-stream" % $AKKA_VERSION,
+  //"com.typesafe.akka" %% "akka-actor" % "$AKKA_VERSION",
+  //"com.typesafe.akka" %% "akka-camel" % "$AKKA_VERSION",
+  //"com.typesafe.akka" %% "akka-slf4j" % "$AKKA_VERSION",
+  //"com.typesafe.akka" %% "akka-stream" % "$AKKA_VERSION",
 
-  //"com.typesafe.akka" %% "akka-http-core" % $AKKA_HTTP_VERSION,
-  //"com.typesafe.akka" %% "akka-http" % $AKKA_HTTP_VERSION,
-  //"com.typesafe.akka" %% "akka-http-testkit" % $AKKA_HTTP_VERSION,
-  //"com.typesafe.akka" %% "akka-http-spray-json" % $AKKA_HTTP_VERSION,
-  //"com.typesafe.akka" %% "akka-http-jackson" % $AKKA_HTTP_VERSION,
-  //"com.typesafe.akka" %% "akka-http-xml" % $AKKA_HTTP_VERSION,
+  //"com.typesafe.akka" %% "akka-http-core" % "$AKKA_HTTP_VERSION",
+  //"com.typesafe.akka" %% "akka-http" % "$AKKA_HTTP_VERSION",
+  //"com.typesafe.akka" %% "akka-http-testkit" % "$AKKA_HTTP_VERSION",
+  //"com.typesafe.akka" %% "akka-http-spray-json" % "$AKKA_HTTP_VERSION",
+  //"com.typesafe.akka" %% "akka-http-jackson" % "$AKKA_HTTP_VERSION",
+  //"com.typesafe.akka" %% "akka-http-xml" % "$AKKA_HTTP_VERSION",
   
   //"com.typesafe" % "config" % "1.3.1"
 )
