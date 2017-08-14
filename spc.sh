@@ -57,7 +57,7 @@ libraryDependencies ++= Seq(
   //"com.typesafe.akka" %% "akka-http-spray-json" % "$AKKA_HTTP_VERSION",
   //"com.typesafe.akka" %% "akka-http-jackson" % "$AKKA_HTTP_VERSION",
   //"com.typesafe.akka" %% "akka-http-xml" % "$AKKA_HTTP_VERSION",
-  
+
   //"com.typesafe" % "config" % "1.3.1"
 )
 EOM

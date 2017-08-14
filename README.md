@@ -4,7 +4,7 @@
 This is a short program that will create a new clean sbt project structure:
 
 ```
-project_root/
+project\_root/
   src/main/scala/Main.scala
   project/
     plugins.sbt
@@ -25,8 +25,8 @@ it's absolute location when you want to execute it.
 
 ```
 $ spc test-project
+<<<<<<< HEAD
 ```
-
 This will create a project in the current directory.
 
 ```
