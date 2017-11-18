@@ -39,6 +39,9 @@ EOM
 # plugins.sbt:
 cat > $PROJECT_ROOT/project/plugins.sbt <<- EOM
 //addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "5.1.0")
+
+//addSbtPlugin("io.spray" % "sbt-revolver" % "0.9.1")
+
 EOM
 
 # build.sbt
