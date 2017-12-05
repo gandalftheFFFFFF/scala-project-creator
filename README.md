@@ -29,7 +29,20 @@ $ spc test-project
 This will create a project in the current directory.
 
 ```
-$ spc /home/niels/scala/new-project
+$ spc /home/niels/scala/test-project
+$ ls
+test-project
+$ tree test-project
+test-project/
+├── build.sbt
+├── project
+│   └── plugins.sbt
+└── src
+    └── main
+        └── scala
+            └── Main.scala
+
+4 directories, 3 files
 ```
 
 This will create a new project in the specified location (so long as the parent
