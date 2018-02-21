@@ -19,7 +19,28 @@ default.
 # Usage
 
 Make the script executable and either place it on your path, or refer to
-it's absolute location when you want to execute it.
+its absolute location when you want to execute it:
+
+```
+$ git clone git@github.com:nielspedersen/scala-project-creator.git
+...
+$ tree scala-project-creator/
+scala-project-creator/
+├── README.md
+└── spc.sh
+$ chmod +x scala-project-creator/spc.sh
+```
+
+Then either refer to that file, or create a symlink to a folder on your `PATH`:
+
+```
+$ ls scala-project-creator/
+README.md  spc.sh*
+$ ln -s scala-project-creator/spc.sh ~/bin/spc
+$ cd
+$ spc
+Error: Please specify a project name
+```
 
 ## Example
 
