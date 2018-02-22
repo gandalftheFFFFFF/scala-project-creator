@@ -23,8 +23,8 @@ fi
 echo "Creating project in: $1"
 
 PROJECT_ROOT=$WORKING_DIR/$CHILD
-AKKA_VERSION="2.4.17"
-AKKA_HTTP_VERSION="10.0.5"
+AKKA_VERSION="2.5.9"
+AKKA_HTTP_VERSION="10.0.11"
 
 mkdir -p $PROJECT_ROOT/src/main/scala
 mkdir $PROJECT_ROOT/project
@@ -42,27 +42,36 @@ cat > $PROJECT_ROOT/project/plugins.sbt <<- EOM
 
 //addSbtPlugin("io.spray" % "sbt-revolver" % "0.9.1")
 
+//addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")
+
 EOM
 
 # build.sbt
 cat > $PROJECT_ROOT/build.sbt <<- EOM
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.4"
+
+val akkaVersion = "$AKKA_VERSION"
+val akkaHttpVersion = "$AKKA_HTTP_VERSION"
 
 libraryDependencies ++= Seq(
-  //"com.typesafe.akka" %% "akka-actor" % "$AKKA_VERSION",
-  //"com.typesafe.akka" %% "akka-camel" % "$AKKA_VERSION",
-  //"com.typesafe.akka" %% "akka-slf4j" % "$AKKA_VERSION",
-  //"com.typesafe.akka" %% "akka-stream" % "$AKKA_VERSION",
+  //"com.typesafe.akka" %% "akka-actor" % akkaVersion,
+  //"com.typesafe.akka" %% "akka-camel" % akkaVersion,
+  //"com.typesafe.akka" %% "akka-slf4j" % akkaVersion,
+  //"com.typesafe.akka" %% "akka-stream" % akkaVersion,
 
-  //"com.typesafe.akka" %% "akka-http-core" % "$AKKA_HTTP_VERSION",
-  //"com.typesafe.akka" %% "akka-http" % "$AKKA_HTTP_VERSION",
-  //"com.typesafe.akka" %% "akka-http-testkit" % "$AKKA_HTTP_VERSION",
-  //"com.typesafe.akka" %% "akka-http-spray-json" % "$AKKA_HTTP_VERSION",
-  //"com.typesafe.akka" %% "akka-http-jackson" % "$AKKA_HTTP_VERSION",
-  //"com.typesafe.akka" %% "akka-http-xml" % "$AKKA_HTTP_VERSION",
+  //"com.typesafe.akka" %% "akka-http" % akkaHttpVersion,
+  //"com.typesafe.akka" %% "akka-http-testkit" % akkaHttpVersion,
+  //"com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
+  //"com.typesafe.akka" %% "akka-http-jackson" % akkaHttpVersion,
+  //"com.typesafe.akka" %% "akka-http-xml" % akkaHttpVersion,
 
   //"com.typesafe" % "config" % "1.3.1"
 )
+EOM
+
+cat > $PROJECT_ROOT/project/build.properties <<- EOM
+sbt.version=1.1.1
+
 EOM
 
 
