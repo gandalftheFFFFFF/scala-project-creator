@@ -74,4 +74,27 @@ sbt.version=1.1.1
 
 EOM
 
+cat > $PROJECT_ROOT/.gitignore <<- EOM
+*.class
+*.log
+
+# sbt specific
+.cache/
+.history/
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
+.idea
+
+EOM
+
+
 
