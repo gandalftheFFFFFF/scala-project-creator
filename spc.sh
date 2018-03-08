@@ -96,5 +96,13 @@ project/plugins/project/
 
 EOM
 
+cat > $PROJECT_ROOT/.scalafmt.conf <<- EOM
+style = defaultWithAlign
+align.tokens = [ ":", "=", "=>", "->", "<-" ]
+maxColumn = 120
+rewrite.rules = [ "RedundantParens", "SortImports" ]
+
+EOM
+
 
 
