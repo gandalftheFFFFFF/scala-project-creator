@@ -28,6 +28,7 @@ AKKA_HTTP_VERSION="10.0.11"
 
 mkdir -p $PROJECT_ROOT/src/main/scala
 mkdir $PROJECT_ROOT/project
+mkdir -p $PROJECT_ROOT/src/main/resources
 
 # Hello world program:
 cat > $PROJECT_ROOT/src/main/scala/Main.scala <<- EOM
@@ -74,6 +75,7 @@ sbt.version=1.1.1
 
 EOM
 
+# gitignore
 cat > $PROJECT_ROOT/.gitignore <<- EOM
 *.class
 *.log
@@ -96,6 +98,7 @@ project/plugins/project/
 
 EOM
 
+# scalafmt config file
 cat > $PROJECT_ROOT/.scalafmt.conf <<- EOM
 style = defaultWithAlign
 align.tokens = [ ":", "=", "=>", "->", "<-" ]
@@ -104,5 +107,9 @@ rewrite.rules = [ "RedundantParens", "SortImports" ]
 
 EOM
 
+# empty application.conf file
+cat > $PROJECT_ROOT/src/main/resources/application.conf <<- EOM
+example = 1
 
+EOM
 
