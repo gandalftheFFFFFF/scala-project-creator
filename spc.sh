@@ -29,6 +29,7 @@ AKKA_HTTP_VERSION="10.0.11"
 mkdir -p $PROJECT_ROOT/src/main/scala
 mkdir $PROJECT_ROOT/project
 mkdir -p $PROJECT_ROOT/src/main/resources
+mkdir -p $PROJECT_ROOT/src/test/scala
 
 # Hello world program:
 cat > $PROJECT_ROOT/src/main/scala/Main.scala <<- EOM
@@ -66,7 +67,9 @@ libraryDependencies ++= Seq(
   //"com.typesafe.akka" %% "akka-http-jackson" % akkaHttpVersion,
   //"com.typesafe.akka" %% "akka-http-xml" % akkaHttpVersion,
 
-  //"com.typesafe" % "config" % "1.3.1"
+  //"com.typesafe" % "config" % "1.3.1",
+
+  //"org.scalatest" %% "scalatest" % "3.0.5" % "test"
 )
 EOM
 
